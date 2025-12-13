@@ -23,8 +23,8 @@ body {
 
 .card {
   background: linear-gradient(180deg, #161616, #0e0e0e);
-  width: 340px;
-  padding: 28px 22px;
+  width: 420px;
+  padding: 36px 32px;;
   border-radius: 20px;
   text-align: center;
 
@@ -34,8 +34,8 @@ body {
 }
 
 .avatar {
-  width: 110px;
-  height: 110px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ff4d4d;
@@ -45,17 +45,17 @@ body {
 
 h1 {
   margin: 10px 0 4px;
-  font-size: 26px;
+  font-size: 32px;
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 16px;
   color: #aaa;
 }
 
 h2 {
-  margin: 22px 0 10px;
-  font-size: 18px;
+  margin: 28px 0 14px;
+  font-size: 22px;
   color: #ff6b6b;
 }
 
@@ -69,9 +69,9 @@ h2 {
 .projects li {
   display: flex;
   flex-direction: column;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(255,255,255,0.05);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .projects span {
@@ -79,8 +79,8 @@ h2 {
 }
 
 .projects small {
-  color: #aaa;
-  font-size: 12px;
+  color: #999;
+  font-size: 14px;
 }
 
 .skills {
@@ -91,11 +91,8 @@ h2 {
 }
 
 .skills span {
-  background: linear-gradient(135deg, #ff4d4d, #ff1f1f);
-  padding: 6px 12px;
-  border-radius: 10px;
-  font-size: 13px;
-  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+  padding: 8px 14px;
+  font-size: 15px;
 }
 
 .links {
@@ -106,12 +103,12 @@ h2 {
 
 .btn {
   flex: 1;
-  padding: 10px 0;
-  border-radius: 12px;
+  padding: 14px 0;
+  border-radius: 14px;
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -135,18 +132,19 @@ h2 {
   100% { background-position: 0% 50%; }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .card {
-    width: 92%;
-    padding: 22px 18px;
+    width: 94%;
+    padding: 28px 22px;
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .avatar {
-    width: 95px;
-    height: 95px;
+    width: 120px;
+    height: 120px;
   }
 }
+
