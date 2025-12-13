@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    120deg,
+    #000000,
+    #120000,
+    #1a0000,
+    #120000,
+    #000000
+  );
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+/* Карточка */
+.card {
+  background: linear-gradient(180deg, #161616, #0e0e0e);
+  width: 340px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  text-align: center;
+
+  box-shadow:
+    0 0 25px rgba(255, 60, 60, 0.35),
+    inset 0 0 20px rgba(255, 80, 80, 0.08);
+
+  animation: fadeIn 0.8s ease;
+}
+
+/* Аватар */
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+
+  border: 3px solid #ff4d4d;
+  box-shadow: 0 0 20px rgba(255, 77, 77, 0.6);
+}
+
+/* Заголовки */
+h1 {
+  margin: 10px 0 5px;
+  font-size: 26px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 25px 0 12px;
+  color: #ff6b6b;
+}
+
+/* Проекты */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 8px 0;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+/* Навыки */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.skills span {
+  background: linear-gradient(135deg, #ff4d4d, #ff1f1f);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skills span:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.9);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
