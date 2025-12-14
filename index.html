@@ -2,46 +2,64 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>marfined</title>
+  <meta name="viewport" content="
+    width=device-width,
+    initial-scale=1,
+    maximum-scale=1,
+    viewport-fit=cover
+  ">
+
+  <title>marfined | Визитка</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="card">
-    <img src="avatar.jpg" alt="Аватар" class="avatar">
+  <main class="wrapper">
+    <section class="card">
 
-    <h1>Привет! 👋</h1>
-    <p class="subtitle">Я начинающий веб-разработчик</p>
+      <img src="avatar.jpg" alt="Аватар" class="avatar">
 
-    <section>
-      <h2>Проекты</h2>
-      <ul class="projects">
-        <li>🌧️ <span>UnlimitedRain</span> <small>Игровые плагины</small></li>
-        <li>🔥 <span>HellScape</span> <small>RPG проект</small></li>
-        <li>🌐 <span>Личный сайт</span></li>
-      </ul>
-    </section>
+      <h1>Привет! 👋</h1>
+      <p class="subtitle">Я начинающий Full-stack</p>
 
-    <section>
-      <h2>Изучаемые языки</h2>
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Python</span>
+      <div class="block">
+        <h2>Проекты</h2>
+        <ul class="projects">
+          <li>
+            <span>🌧️ UnlimitedRain</span>
+            <small>Game plugin</small>
+          </li>
+          <li>
+            <span>🔥 HellScape</span>
+            <small>RPG проект</small>
+          </li>
+          <li>
+            <span>🌐 Сайт-карточка</span>
+          </li>
+        </ul>
       </div>
-    </section>
 
-    <section class="links">
-      <a href="https://github.com/marfined" target="_blank" class="btn github">
-        GitHub
-      </a>
-      <a href="https://t.me/marfined" target="_blank" class="btn telegram">
-        Telegram
-      </a>
+      <div class="block">
+        <h2>Стек</h2>
+        <div class="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="https://github.com/marfined" class="btn github" target="_blank">
+          GitHub
+        </a>
+        <a href="https://t.me/marfined" class="btn telegram" target="_blank">
+          Telegram
+        </a>
+      </div>
+
     </section>
-  </div>
+  </main>
 
 </body>
 </html>

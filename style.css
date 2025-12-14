@@ -1,115 +1,139 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html, body {
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
+  width: 100%;
 }
 
 body {
-  background: linear-gradient(120deg, #000, #1a0000, #000);
-  background-size: 400% 400%;
-  animation: bgMove 12s ease infinite;
-
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   color: #fff;
 
+  min-height: 100svh;
+
+  background: linear-gradient(
+    120deg,
+    #000000,
+    #140000,
+    #240000,
+    #140000,
+    #000000
+  );
+  background-size: 400% 400%;
+  animation: bgMove 14s ease infinite;
+
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
+
+.wrapper {
+  min-height: 100svh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .card {
-  background: linear-gradient(180deg, #161616, #0e0e0e);
-  width: 420px;
-  padding: 36px 32px;;
-  border-radius: 20px;
+  width: min(92vw, 460px);
+  background: linear-gradient(180deg, #161616, #0c0c0c);
+  padding: clamp(24px, 5vw, 36px);
+  border-radius: 24px;
   text-align: center;
 
   box-shadow:
-    0 0 30px rgba(255, 60, 60, 0.35),
-    inset 0 0 20px rgba(255, 80, 80, 0.08);
+    0 0 40px rgba(255, 70, 70, 0.35),
+    inset 0 0 25px rgba(255, 90, 90, 0.12);
 }
 
 .avatar {
-  width: 140px;
-  height: 140px;
+  width: clamp(110px, 30vw, 150px);
+  height: clamp(110px, 30vw, 150px);
   border-radius: 50%;
   object-fit: cover;
+
   border: 3px solid #ff4d4d;
-  box-shadow: 0 0 18px rgba(255, 77, 77, 0.6);
-  margin-bottom: 12px;
+  box-shadow: 0 0 25px rgba(255, 77, 77, 0.8);
+  margin-bottom: 18px;
 }
 
 h1 {
-  margin: 10px 0 4px;
-  font-size: 32px;
+  font-size: clamp(26px, 6vw, 34px);
+  margin-bottom: 6px;
 }
 
 .subtitle {
-  font-size: 16px;
-  color: #aaa;
+  font-size: clamp(15px, 4vw, 18px);
+  color: #b0b0b0;
 }
 
 h2 {
-  margin: 28px 0 14px;
-  font-size: 22px;
+  font-size: clamp(20px, 5vw, 24px);
+  margin-bottom: 12px;
   color: #ff6b6b;
+}
+
+.block {
+  margin-top: 30px;
 }
 
 .projects {
   list-style: none;
-  padding: 0;
-  margin: 0;
   text-align: left;
 }
 
 .projects li {
-  display: flex;
-  flex-direction: column;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  font-size: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: clamp(15px, 4vw, 17px);
 }
 
 .projects span {
+  display: block;
   font-weight: 600;
 }
 
 .projects small {
-  color: #999;
+  color: #aaa;
   font-size: 14px;
 }
 
 .skills {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  gap: 8px;
 }
 
 .skills span {
-  padding: 8px 14px;
-  font-size: 15px;
+  padding: 8px 16px;
+  font-size: clamp(14px, 3.5vw, 16px);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff4d4d, #ff1f1f);
+  box-shadow: 0 0 12px rgba(255, 77, 77, 0.6);
 }
 
 .links {
   display: flex;
-  gap: 12px;
-  margin-top: 22px;
+  gap: 14px;
+  margin-top: 34px;
 }
 
 .btn {
   flex: 1;
-  padding: 14px 0;
-  border-radius: 14px;
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  font-size: 16px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 14px 0;
+  border-radius: 16px;
+  font-size: clamp(15px, 4vw, 17px);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
@@ -118,12 +142,12 @@ h2 {
 
 .github {
   background: #24292e;
-  box-shadow: 0 0 12px rgba(255,255,255,0.2);
+  box-shadow: 0 0 14px rgba(255,255,255,0.25);
 }
 
 .telegram {
   background: linear-gradient(135deg, #2aabee, #1e96c8);
-  box-shadow: 0 0 12px rgba(42,171,238,0.6);
+  box-shadow: 0 0 16px rgba(42,171,238,0.7);
 }
 
 @keyframes bgMove {
@@ -131,20 +155,3 @@ h2 {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
-@media (max-width: 480px) {
-  .card {
-    width: 94%;
-    padding: 28px 22px;
-  }
-
-  h1 {
-    font-size: 26px;
-  }
-
-  .avatar {
-    width: 120px;
-    height: 120px;
-  }
-}
-
